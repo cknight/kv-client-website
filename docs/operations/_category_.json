@@ -1,0 +1,8 @@
+{
+  "label": "Operations",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "After selecting a connection, you can perform the below operations with it."
+  }
+}

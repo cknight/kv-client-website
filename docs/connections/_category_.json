@@ -1,0 +1,8 @@
+{
+  "label": "Connections",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Before working with KV Client, you must first establish one or more connections. KV Client supports 3 different connection types."
+  }
+}

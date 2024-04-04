@@ -1,0 +1,8 @@
+{
+  "label": "Security",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "KV Client aims to be as secure as possible. Learn more about the security features of KV Client."
+  }
+}
