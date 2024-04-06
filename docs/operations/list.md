@@ -17,7 +17,7 @@ https://docs.deno.com/deploy/kv/manual/operations#list. You can also choose how 
 returned with 'limit', whether to reverse the results and if you wish to disable the cache when
 listing. To see all entries in KV, leave prefix, start and end blank and set 'limit' to 'all'.
 
-## Viewing Results
+## Viewing and Filtering Results
 
 Results are shown in a table below the search criteria. Rows will show you the key, value and type
 of the value. Hovering over a value will show a sneak peak of the value. Clicking on a row will show

@@ -1,0 +1,26 @@
+---
+title: Introducing KV Client
+authors: [cknight]
+---
+
+After significant development, I'm proud to announce the first release of KV
+Client. KV Client is a database client for your [Deno KV](https://deno.com/kv)
+data. It provides a UI to work directly with the data in your KV
+databases and is capable of connecting to locally hosted, Deploy hosted or self-hosted KV databases. Best of all, the interface mimics exactly the APIs you are used to
+using in your code so using KV Client will feel very familiar.
+
+Unlike other clients, KV Client doesn't provide a tree view of your data.  One main problem with the approach of using a tree view is that it requires you to download the entire database (keys and values) to be able to display the tree of keys and then keep the entire database in memory.  With KV Client, you can `get` a single entry, or use the `list` interface to directly access a range of entries, or even all the data if you need to, getting only the data you need.  This results in a significantly faster user experience for larger KV databases and one which doesn't consume significant amounts read units every time you access a Deno Deploy KV database.
+
+Creating connections is very straightforward.  For local connections, KV Client will auto-discover any connection created via `Deno.openKv()` and provide a selection of data to help you work out which KV database it is.  With a single access token, you can connect to all your Deploy production and preview KV databases.  And finally, with a URL and access token you can easily connect to self-hosted databases too.
+
+In addition to the [`get`](/docs/operations/get), [`set`](/docs/operations/set) and [`list`](/docs/operations/list) operations, KV Client also supports a number of other operations including:
+
+* [`Delete`](/docs/operations/delete) one, many or all keys
+* [`Copy`](/docs/operations/copy) one, many or all KV entries to another KV Client connection
+* [`Import`](/docs/operations/import) all data from another KV Client connection or KV sqlite file
+* [`Export`](/docs/operations/export) all data to a KV sqlite file
+* Free text filtering of `list` results
+
+Another strength of KV Client is the ability to work with many types, even complex data structures containing multiple types.  Need to update a number array inside a map (e.g. a KV value which is of type `Map<string, number[]>`)?  No problem, KV Client can allow you to achieve this.  Many types and data structures are supported.
+
+KV Client aims to be your primary developer tool when working with KV databases.  Head on over the [docs](/docs/installation) to learn more.
