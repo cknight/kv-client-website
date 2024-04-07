@@ -5,8 +5,8 @@ sidebar_position: 3
 
 # Auditing
 
-All operations are logged as audits which expire after 30 days. Audits may be
-found in the KV Client KV database under the `"audit"` prefix. The user who
+All major operations are logged as audits which expire after 30 days. Audits may
+be found in the KV Client KV database under the `"audit"` prefix. The user who
 initiated the operation is included in the audit, either as anonymous (with
 session id) or as the Deploy user name. Example audit for user Joe, who ran
 `list` for key's prefixed with `"User"`, limiting to 50 results and which took

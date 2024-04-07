@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_designer_life_re_6ywf.svg').default,
     description: (
       <>
-        The KV Client will feel very familiar.  Think coding for Deno KV in the browser.
+        KV Client will feel very familiar.  Think coding with Deno KV with form fields.
       </>
     ),
   },
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_super_woman_dv-0-y.svg').default,
     description: (
       <>
-        Like Deno KV, KV Client is fast and efficient.
+        Like Deno KV, KV Client is very fast.
       </>
     ),
   },

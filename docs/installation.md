@@ -7,5 +7,5 @@ sidebar_position: 1
 TODO
 
 ## How to install
-
+KV_CLIENT_ENCRYPTION_KEY
 ## How to run
