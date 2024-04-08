@@ -4,11 +4,14 @@ sidebar_position: 6
 
 # Consistency and Caching
 
-Strong consistency is used for most operations.  Generally speaking, when working with smaller datasets you can expect all operations (except Export) to be strongly consistent.  However, working with larger datasets (e.g. copy/delete/import/export) hits constraints with KV that eliminate consistency guarantees.
+Strong consistency is used for most operations. Generally speaking, when working
+with smaller datasets you can expect all operations (except Export) to be
+strongly consistent. However, working with larger datasets (e.g.
+copy/delete/import/export) hits constraints with KV that eliminate consistency
+guarantees.
 
-Caching is use session specific.
-E.g. search results are not globally cached. Operations which modify entires
-will invalidate the cache.
+Caching is user session specific. E.g. search results are not globally cached.
+Operations which modify entires will invalidate the cache.
 
 | Operation | Consistency (small datasets) | Consistency (large datasets) | Caching                                        |
 | --------- | ---------------------------- | ---------------------------- | ---------------------------------------------- |
@@ -25,11 +28,11 @@ which you can retrieve from KV at once. There is no consistency guarantee
 between batches of 500.
 
 \*\* Eventual consistency is used for Export to take advantage of the higher
-performance. As this operation uses `list` to extract the data from the source
+performance. As this operation uses `list` to extract all data from the source
 DB, it's only consistent within batches of 500 keys. Therefore eventual
 consistency is used for it's higher performance to reduce the overall window of
 time the operation needs to complete (during which it is more vulnerable to
-inconsistent data)
+inconsistent data).
 
 \*\*\* Copy and delete have two consistency constraints. The first is a
 non-guarantee of consistency of data when working with more than 500 keys (e.g.

@@ -10,11 +10,11 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Familiar Interface',
+    title: 'Powerful',
     Svg: require('@site/static/img/undraw_designer_life_re_6ywf.svg').default,
     description: (
       <>
-        KV Client will feel very familiar.  Think coding with Deno KV with form fields.
+        Get, List, Delete, Copy, Set, Import or Export your data. KV Client exposes all the power and flexibility of KV in the browser. 
       </>
     ),
   },
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_super_woman_dv-0-y.svg').default,
     description: (
       <>
-        Like Deno KV, KV Client is very fast.
+        Like Deno KV, KV Client is very fast, even when working with large databases.
       </>
     ),
   },

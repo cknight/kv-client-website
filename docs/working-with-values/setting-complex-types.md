@@ -7,18 +7,18 @@ sidebar_position: 3
 
 In addition to simple types, KV Client also supports a number of other data
 types and data structures. As all values submitted through the UI are
-essentially strings which are parsed via a JSON5 parser, types which are not
+essentially raw strings which are parsed via a JSON5 parser, types which are not
 natively supported by JSON5 parsing must be handled specially. Each has a
 straightforward shorthand notation for primary KV values, however a longer
 notation must be used when embedding within other data structures (e.g object,
 Map, Array, etc.) in the format of
 `{ type: <valueType>, value: <actualValue> }`. Examples shown are what you would
-type into KV Client when setting a value.
+type into KV Client when setting or updating a KV value.
 
-| KV Value Type | Example as KV value                       | Example setting value within a data structure                              |
+| KV Value Type | Example as KV value                       | Example setting value within a data structure (KV value type of object)    |
 | ------------- | ----------------------------------------- | -------------------------------------------------------------------------- |
 | bigint        | `123456n`                                 | `{ myBigInt: { type: "bigint", value: "1234213421352n" }}`                 |
-| Array         | `[ 1, 2, 3 ]`                             | `{ myArray: [ 1,2,3]}`                                                     |
+| Array         | `[ 1, "hello", true ]`                    | `{ myArray: [ 1, "hello", true]}`                                          |
 | Map           | `[["key1", "value1"],["key2", "value2"]]` | `{ myMap: { type: "Map", value: [["key1", "value1"],["key2", "value2"]]}}` |
 | Set           | ["key1","key2"]                           | `{ mySet: { type: "Set", value: ["key1", "key2"] }}`                       |
 | Date          | `628021800000`                            | `{ myDate: { type: "Date", value: 628021800000}}`                          |
@@ -30,18 +30,18 @@ type into KV Client when setting a value.
 
 ### Using Type templates
 
-When setting data structures, you must use the long form for non-simple types
+When setting within data structures, you must use the long form for non-simple types
 when storing these within the data structure. For example, if you set a value to
 `{ x: [1,2,3]}`, is the type of 'x' an array of numbers? A set? Maybe a
-Uint8Array? We need more type detail to be included. This is where long-form
+Uint8Array? We need more type detail to be included. This is why long-form
 values are needed. Example of these are shown in the right hand column of the
 table above. However, using these can be tedious, which is where the 'Type
 templates' comes into play. Let's say you want to have an array of Date objects.
-When setting the value, ensure the 'Value Type' is Array. This will enable the
+When setting the value, ensure the 'Value Type' (of the KV entry) is Array. This will enable the
 type templates. In the value box, enter the brackets for the array, e.g. `[]`,
 place the cursor between the brackets and select 'Date' from the 'Type
 templates' dropdown and finally click on 'Insert'. This will insert into the
-code something like `{ type: "Date", value: "2024-03-30T20:28:51.332Z" }`. you
+value (at your cursor position) something like `{ type: "Date", value: "2024-03-30T20:28:51.332Z" }`. You
 can now modify the date as needed. Inserting two dates (don't forget the comma
 separator) would yield:
 
