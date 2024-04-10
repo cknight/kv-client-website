@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'KV Client',
-  tagline: 'A UI for your KV database',
+  tagline: 'A UI for your Deno KV database',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
