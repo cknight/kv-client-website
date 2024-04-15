@@ -29,7 +29,7 @@ $ npm run serve
 
 ### Deployment
 
-From the build directory, run the following to deploy:
+After building, switch to the build directory and run the following to deploy:
 
 ```sh
 $ deployctl deploy include=.
