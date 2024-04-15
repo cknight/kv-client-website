@@ -11,8 +11,6 @@ automatically attempt to discover all databases automatically created by Deno
 (through `Deno.openKv()` where a specific location hasn't been used). For each
 auto-discovered KV database, a selection of key/value pairs is displayed to help
 identify the database. Databases which haven't been auto-discovered may still be
-used by supplying the exact file location of the database. 
+used by supplying the exact file location of the database.
 
-:::note
-Local connections setup are shared across all users.
-:::
+:::note Local connections setup are shared across all users. :::

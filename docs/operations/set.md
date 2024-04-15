@@ -6,6 +6,6 @@ sidebar_position: 3
 # Set
 
 `Set` allows you to insert or overwrite an entry in KV. This is equivalent to
-`await kv.set(["my key"], { hello: "world"})`. When setting values it will error out
-by default if the key already exists. You can override this behavior by
+`await kv.set(["my key"], { hello: "world"})`. When setting values it will error
+out by default if the key already exists. You can override this behavior by
 unticking the 'Do not overwrite' checkbox.

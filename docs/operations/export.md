@@ -11,14 +11,12 @@ file.
 
 :::caution Caution
 
-There are no consistency guarantees with this operation for databases
-with more than 500 entries. 
+There are no consistency guarantees with this operation for databases with more
+than 500 entries.
 
-Data is retrieved from the connection using 'list',
-which can only guarantee consistency for up to 500 entries per batch. If you
-have more entries than this in your store then consistency is not guaranteed
-between batches. 
-:::
+Data is retrieved from the connection using 'list', which can only guarantee
+consistency for up to 500 entries per batch. If you have more entries than this
+in your store then consistency is not guaranteed between batches. :::
 
 If the purpose of your export is for backups, then the following options are
 likely better suited:
@@ -26,5 +24,6 @@ likely better suited:
 - Deploy - See https://docs.deno.com/deploy/kv/manual/backup
 - Local or self-hosted - Simply locate the db file(s) and copy it.
 
-If neither are suitable, then you can ensure consistency with this export operation by pausing or taking down service
-(to ensure no modifications occur) while you perform the export.
+If neither are suitable, then you can ensure consistency with this export
+operation by pausing or taking down service (to ensure no modifications occur)
+while you perform the export.

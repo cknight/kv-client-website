@@ -30,20 +30,21 @@ type into KV Client when setting or updating a KV value.
 
 ### Using Type templates
 
-When setting within data structures, you must use the long form for non-simple types
-when storing these within the data structure. For example, if you set a value to
-`{ x: [1,2,3]}`, is the type of 'x' an array of numbers? A set? Maybe a
+When setting within data structures, you must use the long form for non-simple
+types when storing these within the data structure. For example, if you set a
+value to `{ x: [1,2,3]}`, is the type of 'x' an array of numbers? A set? Maybe a
 Uint8Array? We need more type detail to be included. This is why long-form
 values are needed. Example of these are shown in the right hand column of the
 table above. However, using these can be tedious, which is where the 'Type
 templates' comes into play. Let's say you want to have an array of Date objects.
-When setting the value, ensure the 'Value Type' (of the KV entry) is Array. This will enable the
-type templates. In the value box, enter the brackets for the array, e.g. `[]`,
-place the cursor between the brackets and select 'Date' from the 'Type
-templates' dropdown and finally click on 'Insert'. This will insert into the
-value (at your cursor position) something like `{ type: "Date", value: "2024-03-30T20:28:51.332Z" }`. You
-can now modify the date as needed. Inserting two dates (don't forget the comma
-separator) would yield:
+When setting the value, ensure the 'Value Type' (of the KV entry) is Array. This
+will enable the type templates. In the value box, enter the brackets for the
+array, e.g. `[]`, place the cursor between the brackets and select 'Date' from
+the 'Type templates' dropdown and finally click on 'Insert'. This will insert
+into the value (at your cursor position) something like
+`{ type: "Date", value: "2024-03-30T20:28:51.332Z" }`. You can now modify the
+date as needed. Inserting two dates (don't forget the comma separator) would
+yield:
 
 ```ts
 [
